@@ -1,8 +1,10 @@
 import './App.css';
-import { mockProductsResponse, mockCombinedData } from './mockData'
+import { mockProductsResponse, mockCombinedData, mockContentResponse } from './mockData'
+import { extractRowsAndCells } from './util'
 
 function App() {
   const components = mockCombinedData
+  console.log(extractRowsAndCells(mockContentResponse.data))
   return (
     <>
       <h1>Hearst E-Commerce</h1>
