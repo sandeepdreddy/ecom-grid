@@ -23,7 +23,7 @@ export const extractRowsAndCells = (contentData) => {
       }
     }
     contentRows = contentRows.sort((a, b) => a.positionNumber - b.positionNumber);
-    contentCells = contentRows.sort(
+    contentCells = contentCells.sort(
       (a, b) => a.positionNumber - b.positionNumber
     );
     return {
