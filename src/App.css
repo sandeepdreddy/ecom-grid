@@ -16,10 +16,13 @@ h1 {
   grid-gap: 5px;
 }
 
-
 .grid-item {
   border: 2px solid black;
   background-color: beige;
+}
+
+.grid-item.row {
+  grid-column: 1 / -1;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,19 +1,28 @@
 import './App.css';
-import { mockProductsResponse } from './mockData'
+import { mockProductsResponse, mockCombinedData } from './mockData'
 
 function App() {
-  const { products } = mockProductsResponse
+  const components = mockCombinedData
   return (
     <>
       <h1>Hearst E-Commerce</h1>
       <div className='main-container'>
         <div className='grid-container'>
-        {products.map((product) => (
-            <div key={product.product_id} className='grid-item'>
-              <div>{product.title}</div>
-              <img src={product.image} alt={product.title} />
-            </div>
-          ))}
+        {components.map((component) => {
+            if (component.isContent) {
+              return (
+                <div key={component.position} className={`grid-item ${component.positionType}`}>
+                  <div>{component.contents}</div>
+                </div>
+              )
+            }
+            return (
+              <div key={component.product_id} className='grid-item'>
+                <div>{component.title}</div>
+                <img src={component.image} alt={component.name} />
+              </div>
+            )
+          })}
         </div>
       </div>
     </>
