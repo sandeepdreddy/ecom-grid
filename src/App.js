@@ -1,10 +1,9 @@
 import './App.css';
-import { mockProductsResponse, mockCombinedData, mockContentResponse } from './mockData'
-import { extractRowsAndCells } from './util'
+import { mockProductsResponse, mockContentResponse } from './mockData'
+import { combineDatasets } from './util'
 
 function App() {
-  const components = mockCombinedData
-  console.log(extractRowsAndCells(mockContentResponse.data))
+  const components = combineDatasets(mockProductsResponse.products, mockContentResponse.data)
   return (
     <>
       <h1>Hearst E-Commerce</h1>
