@@ -11,7 +11,7 @@ function App() {
         {products.map((product) => (
             <div key={product.product_id} className='grid-item'>
               <div>{product.title}</div>
-              <div>{product.image}</div>
+              <img src={product.image} alt={product.title} />
             </div>
           ))}
         </div>
