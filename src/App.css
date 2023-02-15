@@ -14,3 +14,9 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
 }
+
+
+.grid-item {
+  border: 2px solid black;
+  background-color: beige;
+}
